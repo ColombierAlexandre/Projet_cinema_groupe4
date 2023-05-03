@@ -5,7 +5,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;ategy = GenerationType.IDENTITY)
+import jakarta.persistence.Table;
+
+
+@Entity
+@Table(name = "Cinema")
+public class Cinema {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idCinema;
 
 	@Column(name = "Nom")
