@@ -33,6 +33,16 @@ public class UtilisateurService {
 		}
 	}
 	
+	public Utilisateur getUtilisateurByEmailService (String email) {
+		Optional<Utilisateur> optionalUtilisateur = utilisateurDao.findByEmail(email);
+		if (optionalUtilisateur.isPresent()) {
+			return optionalUtilisateur.get();
+		}else {
+			System.out.println("Utilisateur non trouvé :(");
+			return null;
+		}
+	}
+	
 	public List<Utilisateur> getAllUtilisateursService () {
 		return utilisateurDao.findAll();
 	}

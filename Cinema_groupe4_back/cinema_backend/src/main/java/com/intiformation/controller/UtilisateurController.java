@@ -34,9 +34,14 @@ public class UtilisateurController {
 		return utilisateurService.updateUtilisateurService(utilisateur);
 	}
 	
-	@GetMapping("/{id}")
+	@GetMapping("getById/{id}")
 	public Utilisateur getUtilisateurByIdController (@PathVariable("id") Long idUtilisateur) {
 		return utilisateurService.getUtilisateurByIdService(idUtilisateur);
+	}
+	
+	@GetMapping("getByEmail/{email}")
+	public Utilisateur getUtilisateurByEmailController (@PathVariable("email") String email) {
+		return utilisateurService.getUtilisateurByEmailService(email);
 	}
 	
 	@GetMapping
