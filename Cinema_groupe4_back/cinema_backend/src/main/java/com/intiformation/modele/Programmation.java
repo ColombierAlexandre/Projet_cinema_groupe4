@@ -20,6 +20,12 @@ public class Programmation {
 	private long idProgrammation;
 	private Date dateHeureProg;
 	private List<Place> listePlaces;
+	@ManyToOne
+	@JoinColumn(name = "film_id", referencedColumnName = "visaExploitation")
+	private Film film;
+	@ManyToOne
+	@JoinColumn(name = "salle_id", referencedColumnName = "idSalle")
+	private Salle salle;
 	
 	public Programmation(Date dateHeureProg, Film film, Salle salle) {
 		this.dateHeureProg = dateHeureProg;
@@ -35,7 +41,7 @@ public class Programmation {
 	}
 	
 	private List<Place> genererListePlaces(Salle salle) {
-		for(int i=0;i<salle.getNbPlaces();i++) {
+		for(int i=0;i<salle.getNombreDePlaces();i++) {
 			Place place = new Place(i+1,false);
 			this.listePlaces.add(place);
 		}
