@@ -8,13 +8,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
-@Entity 
+@Entity
 public class Utilisateur {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_utilisateur")
-	private Long id;
+	private long id;
 	private String email;
 	private String motDePasse;
 	private String nom;
@@ -26,14 +26,12 @@ public class Utilisateur {
 	private Long numeroCB;
 	private short criptogramme;
 	private Date dateNaissance;
-	
+
 	public Utilisateur() {
-		super();
 	}
 
 	public Utilisateur(String email, String motDePasse, String nom, String prenom, String ville, String numeroEtRue,
 			int codePostal, Long numeroCB, short criptogramme, Date dateNaissance) {
-		super();
 		this.email = email;
 		this.motDePasse = motDePasse;
 		this.nom = nom;
@@ -48,7 +46,6 @@ public class Utilisateur {
 
 	public Utilisateur(Long id, String email, String motDePasse, String nom, String prenom, String ville,
 			String numeroEtRue, int codePostal, Long numeroCB, short criptogramme, Date dateNaissance) {
-		super();
 		this.id = id;
 		this.email = email;
 		this.motDePasse = motDePasse;
@@ -149,10 +146,5 @@ public class Utilisateur {
 	public void setDateNaissance(Date dateNaissance) {
 		this.dateNaissance = dateNaissance;
 	}
-	
-	
-	
-	
-	
-	
+
 }

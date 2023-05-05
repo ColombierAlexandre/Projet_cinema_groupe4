@@ -11,62 +11,59 @@ import com.intiformation.modele.Cinema;
 
 @Service
 public class CinemaService {
-	
-	
+
 	private CinemaRepository cineRepo;
-	
+
 	@Autowired
 	public void setCineRepo(CinemaRepository cineRepo) {
 		this.cineRepo = cineRepo;
 	}
 
-	public Cinema create (Cinema cinema) {
+	public Cinema create(Cinema cinema) {
 		return cineRepo.save(cinema);
 	}
-	
-	public List<Cinema> getAllCinema(){
+
+	public List<Cinema> getAllCinema() {
 		return cineRepo.findAll();
 	}
-	
-	public Cinema getCinemaById (long id) {
+
+	public Cinema getCinemaById(long id) {
 		Optional<Cinema> optionalCinema = cineRepo.findById(id);
 		if (optionalCinema != null) {
 			Cinema cinema = optionalCinema.get();
 			return cinema;
-		}else {
+		} else {
 			return null;
 		}
 	}
-	
-	public Cinema getCinemaByNom (String nom) {
+
+	public Cinema getCinemaByNom(String nom) {
 		Optional<Cinema> optionalCinema = cineRepo.findByNom(nom);
 		if (optionalCinema != null) {
 			Cinema cinema = optionalCinema.get();
 			return cinema;
-		}else {
+		} else {
 			return null;
 		}
-		
+
 	}
-	
-	public List<Cinema> getCinemaByVille (String ville) {
+
+	public List<Cinema> getCinemaByVille(String ville) {
 		return cineRepo.findAllByVille(ville);
-		
+
 	}
-	
-	public Cinema modifier (Cinema cinema) {
-		
+
+	public Cinema modifier(Cinema cinema) {
+
 		if (getCinemaById(cinema.getIdCinema()) != null) {
 			return cineRepo.save(cinema);
-		}else {
+		} else {
 			return null;
 		}
 	}
-	
+
 	public void delete(Cinema cinema) {
-			cineRepo.delete(cinema);
+		cineRepo.delete(cinema);
 	}
-	
-	
-	
+
 }

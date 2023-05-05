@@ -7,65 +7,64 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.intiformation.dao.SalleRepository;
-import com.intiformation.modele.Cinema;
 import com.intiformation.modele.Salle;
 
 @Service
 public class SalleService {
-	
+
 	private SalleRepository salleRepo;
 
 	@Autowired
 	public void setSalleRepo(SalleRepository salleRepo) {
 		this.salleRepo = salleRepo;
 	}
-	
-	public Salle create (Salle salle) {
+
+	public Salle create(Salle salle) {
 		return salleRepo.save(salle);
-		
+
 	}
-	
-	public List<Salle> getAllSalle(){
+
+	public List<Salle> getAllSalle() {
 		return salleRepo.findAll();
 	}
-	
-	public Salle getSalleById (long id) {
+
+	public Salle getSalleById(long id) {
 		Optional<Salle> optionalSalle = salleRepo.findById(id);
 		if (optionalSalle != null) {
 			Salle salle = optionalSalle.get();
 			return salle;
-		}else {
+		} else {
 			return null;
 		}
 	}
-	
-	public Salle getSalleByNumero (int numero) {
+
+	public Salle getSalleByNumero(int numero) {
 		Optional<Salle> optionalSalle = salleRepo.findByNumero(numero);
 		if (optionalSalle != null) {
 			Salle salle = optionalSalle.get();
 			return salle;
-		}else {
+		} else {
 			return null;
 		}
-		
+
 	}
-	
-	public List<Salle> getSalleByIdCinema (long idCinema) {
+
+	public List<Salle> getSalleByIdCinema(long idCinema) {
 		return salleRepo.findAllByIdCinema(idCinema);
-		
+
 	}
-	
-	public Salle modifier (Salle salle) {
-		
+
+	public Salle modifier(Salle salle) {
+
 		if (salle.getIdSalle() != 0) {
 			return salleRepo.save(salle);
-		}else {
+		} else {
 			return null;
 		}
 	}
-	
+
 	public void delete(Salle salle) {
-			salleRepo.delete(salle);
-		
+		salleRepo.delete(salle);
+
 	}
 }
