@@ -13,6 +13,7 @@ import { ListeFilmComponent } from './composant/liste-film/liste-film.component'
 import { PlaceComponent } from './composant/place/place.component';
 import { ValiderTicketComponent } from './composant/valider-ticket/valider-ticket.component';
 import { ListeProgrammationComponent } from './composant/liste-programmation/liste-programmation.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ListeProgrammationComponent } from './composant/liste-programmation/lis
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
