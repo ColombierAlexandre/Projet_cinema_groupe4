@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class CarouselComponent {
 
+  affiche_front : string = "../assets/images/django.jpg"
+
 }

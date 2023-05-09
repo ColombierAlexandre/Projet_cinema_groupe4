@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AfficherUnFilmComponent {
 
+  image : string = "../assets/images/django.jpg"
+
+  affiche_front : string = "../assets/images/django.jpg"
+
 }
