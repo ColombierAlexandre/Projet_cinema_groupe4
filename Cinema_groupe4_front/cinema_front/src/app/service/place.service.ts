@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Place } from '../model/place-class';
+import { Place } from '../model/place';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
