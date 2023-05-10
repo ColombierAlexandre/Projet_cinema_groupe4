@@ -17,6 +17,7 @@ public class Film {
 	@Id
 	private int visaExploitation;
 	private String titre;
+	private String urlImage;
 	private Time duree;
 	private String realisateur;
 	private String producteur;
@@ -29,10 +30,12 @@ public class Film {
 	public Film() {
 	}
 
-	public Film(int visaExploitation, String titre, Time duree, String realisateur, String producteur, String[] acteurs,
-			Date dateDeSortie, List<Caracteristiques> listeCaracteristiques) {
+	public Film(int visaExploitation, String titre, String urlImage, Time duree, String realisateur, String producteur,
+			String[] acteurs, Date dateDeSortie, List<Caracteristiques> listeCaracteristiques) {
+		super();
 		this.visaExploitation = visaExploitation;
 		this.titre = titre;
+		this.urlImage = urlImage;
 		this.duree = duree;
 		this.realisateur = realisateur;
 		this.producteur = producteur;
@@ -40,6 +43,8 @@ public class Film {
 		this.dateDeSortie = dateDeSortie;
 		this.listeCaracteristiques = listeCaracteristiques;
 	}
+
+
 
 	public int getVisaExploitation() {
 		return visaExploitation;
@@ -104,5 +109,14 @@ public class Film {
 	public void setListeCaracteristiques(List<Caracteristiques> listeCaracteristiques) {
 		this.listeCaracteristiques = listeCaracteristiques;
 	}
+
+	public String getUrlImage() {
+		return urlImage;
+	}
+
+	public void setUrlImage(String urlImage) {
+		this.urlImage = urlImage;
+	}
+	
 
 }

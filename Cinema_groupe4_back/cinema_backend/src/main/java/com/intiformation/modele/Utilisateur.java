@@ -1,12 +1,14 @@
 package com.intiformation.modele;
 
 import java.sql.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 @Entity
 public class Utilisateur {
@@ -26,12 +28,17 @@ public class Utilisateur {
 	private Long numeroCB;
 	private short criptogramme;
 	private Date dateNaissance;
+	
+	@OneToMany
+	private List<Reservation> ListeReservations;
 
 	public Utilisateur() {
 	}
 
 	public Utilisateur(String email, String motDePasse, String nom, String prenom, String ville, String numeroEtRue,
-			int codePostal, Long numeroCB, short criptogramme, Date dateNaissance) {
+			int codePostal, Long numeroCB, short criptogramme, Date dateNaissance,
+			List<Reservation> listeReservations) {
+		super();
 		this.email = email;
 		this.motDePasse = motDePasse;
 		this.nom = nom;
@@ -42,10 +49,13 @@ public class Utilisateur {
 		this.numeroCB = numeroCB;
 		this.criptogramme = criptogramme;
 		this.dateNaissance = dateNaissance;
+		ListeReservations = listeReservations;
 	}
 
-	public Utilisateur(Long id, String email, String motDePasse, String nom, String prenom, String ville,
-			String numeroEtRue, int codePostal, Long numeroCB, short criptogramme, Date dateNaissance) {
+	public Utilisateur(long id, String email, String motDePasse, String nom, String prenom, String ville,
+			String numeroEtRue, int codePostal, Long numeroCB, short criptogramme, Date dateNaissance,
+			List<Reservation> listeReservations) {
+		super();
 		this.id = id;
 		this.email = email;
 		this.motDePasse = motDePasse;
@@ -57,13 +67,15 @@ public class Utilisateur {
 		this.numeroCB = numeroCB;
 		this.criptogramme = criptogramme;
 		this.dateNaissance = dateNaissance;
+		ListeReservations = listeReservations;
 	}
 
-	public Long getId() {
+	
+	public long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
@@ -146,5 +158,15 @@ public class Utilisateur {
 	public void setDateNaissance(Date dateNaissance) {
 		this.dateNaissance = dateNaissance;
 	}
+
+	public List<Reservation> getListeReservations() {
+		return ListeReservations;
+	}
+
+	public void setListeReservations(List<Reservation> listeReservations) {
+		ListeReservations = listeReservations;
+	}
+	
+	
 
 }
