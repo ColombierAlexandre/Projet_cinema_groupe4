@@ -23,22 +23,21 @@ public class Reservation {
 	
 
 	public Reservation() {
-		super();
 	}
 
-	public Reservation(String nom, String prenom, Programmation programmation) {
-		super();
+	public Reservation(String nom, String prenom, Programmation programmation, String email) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.programmation = programmation;
+		this.email = email;
 	}
 
-	public Reservation(long id, String nom, String prenom, Programmation programmation) {
-		super();
+	public Reservation(long id, String nom, String prenom, Programmation programmation, String email) {
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.programmation = programmation;
+		this.email = email;
 	}
 
 	public long getId() {
@@ -73,7 +72,16 @@ public class Reservation {
 		this.programmation = programmation;
 	}
 
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	
+	
+
 	
 	
 }

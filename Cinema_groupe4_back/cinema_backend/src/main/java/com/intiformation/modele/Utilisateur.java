@@ -38,7 +38,6 @@ public class Utilisateur {
 	public Utilisateur(String email, String motDePasse, String nom, String prenom, String ville, String numeroEtRue,
 			int codePostal, Long numeroCB, short criptogramme, Date dateNaissance,
 			List<Reservation> listeReservations) {
-		super();
 		this.email = email;
 		this.motDePasse = motDePasse;
 		this.nom = nom;
@@ -55,7 +54,6 @@ public class Utilisateur {
 	public Utilisateur(long id, String email, String motDePasse, String nom, String prenom, String ville,
 			String numeroEtRue, int codePostal, Long numeroCB, short criptogramme, Date dateNaissance,
 			List<Reservation> listeReservations) {
-		super();
 		this.id = id;
 		this.email = email;
 		this.motDePasse = motDePasse;
