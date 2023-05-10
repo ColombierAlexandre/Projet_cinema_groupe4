@@ -16,7 +16,7 @@ import com.intiformation.modele.Place;
 import com.intiformation.service.PlaceService;
 
 @RestController
-@RequestMapping("/place")
+@RequestMapping("/place_api")
 @CrossOrigin("http://localhost:4200")
 public class PlaceController {
 
@@ -50,7 +50,8 @@ public class PlaceController {
 	public List<Place> getAllProgrammation() {
 		return placeService.getAllPlace();
 	}
-
+	
+	@GetMapping("/getAll")
 	public List<Place> getAllPlaceForShow(Long idProg) {
 		return placeService.getAllPlaceForShow(idProg);
 	}
