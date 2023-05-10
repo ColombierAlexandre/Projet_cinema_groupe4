@@ -1,1 +1,15 @@
-<p>place works!</p>
+<h3>Choisissez vos places</h3>>
+
+<div class="salle">
+    <div class="BoiteGroupePlaces">
+        <div class="GroupePlaces" *ngFor=" let i of [1,2,3]">
+            <div class="Colonne" *ngFor=" let i of [1,2,3,4]">
+                <div class="Ligne" *ngFor=" let i of [1,2,3,4,5]">
+                    <div class="Place">
+                        <button class="buttonPlace"></button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
