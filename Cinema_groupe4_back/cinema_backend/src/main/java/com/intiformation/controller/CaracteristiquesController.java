@@ -17,7 +17,7 @@ import com.intiformation.modele.Caracteristiques;
 import com.intiformation.service.CaracteristiquesService;
 
 @RestController
-@RequestMapping("caracteristiquesapi")
+@RequestMapping("caracteristiques_api")
 @CrossOrigin("http://localhost:4200")
 public class CaracteristiquesController {
 
