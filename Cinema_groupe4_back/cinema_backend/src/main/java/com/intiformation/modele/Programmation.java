@@ -19,27 +19,25 @@ public class Programmation {
 	@Column(name = "id_programmation")
 	private long idProgrammation;
 	private Date dateHeureProg;
-	private List<Place> listePlaces;
-	
-	public Programmation(Date dateHeureProg, Film film, Salle salle) {
-		this.dateHeureProg = dateHeureProg;
-		this.listePlaces = genererListePlaces(salle);
+	@ManyToOne
+	@JoinColumn(name = "film_id", referencedColumnName = "visaExploitation")
+	private Film film;
+	@ManyToOne
+	@JoinColumn(name = "salle_id", referencedColumnName = "idSalle")
+	private Salle salle;
+
+	public Programmation() {
 	}
-	
-	public Programmation(long idProgrammation, Date dateHeureProg, Film film, Salle salle) {
-		this.idProgrammation = idProgrammation;
+
+	public Programmation(long numeroPlace, boolean isUsed, Date dateHeureProg, List<Place> listePlaces) {
+		this.dateHeureProg = dateHeureProg;
+	}
+
+	public Programmation(long numeroPlace, boolean isUsed, Date dateHeureProg, List<Place> listePlaces, Film film,
+			Salle salle) {
 		this.dateHeureProg = dateHeureProg;
 		this.film = film;
 		this.salle = salle;
-		this.listePlaces = genererListePlaces(salle);
-	}
-	
-	private List<Place> genererListePlaces(Salle salle) {
-		for(int i=0;i<salle.getNbPlaces();i++) {
-			Place place = new Place(i+1,false);
-			this.listePlaces.add(place);
-		}
-		return listePlaces;
 	}
 
 	public long getIdProgrammation() {
@@ -58,11 +56,21 @@ public class Programmation {
 		this.dateHeureProg = dateHeureProg;
 	}
 
-	public List<Place> getListePlaces() {
-		return listePlaces;
+	public Film getFilm() {
+		return film;
 	}
 
-	public void setListePlaces(List<Place> listePlaces) {
-		this.listePlaces = listePlaces;
+	public void setFilm(Film film) {
+		this.film = film;
 	}
+
+	public Salle getSalle() {
+		return salle;
+	}
+
+	public void setSalle(Salle salle) {
+		this.salle = salle;
+	}
+	
+
 }

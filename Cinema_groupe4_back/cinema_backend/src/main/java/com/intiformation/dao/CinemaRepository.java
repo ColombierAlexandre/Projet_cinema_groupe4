@@ -6,13 +6,16 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.intiformation.modele.Cinema;
 
+@Repository
 public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
 	Optional<Cinema> findByNom(String nom);
-	
-	@Query("select c from Cinema c where c.Ville = :maVille")
-	List<Cinema> findAllByVille(@Param ("maVille") String maVille);
+
+	@Query("SELECT c FROM Cinema c WHERE c.ville = :villeParam")
+	List<Cinema> findAllByVille(@Param("villeParam") String ville);
+
 }

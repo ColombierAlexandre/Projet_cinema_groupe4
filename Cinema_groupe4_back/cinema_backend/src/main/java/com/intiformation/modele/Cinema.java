@@ -1,46 +1,27 @@
 package com.intiformation.modele;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Cinema")
 public class Cinema {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long idCinema;
-
-	@Column(name = "Nom")
 	private String nom;
-
-	@Column(name = "Telephone")
 	private long telephone;
-
-	@Column(name = "Mail")
 	private String mail;
-
-	@Column(name = "Rue")
 	private String rue;
-
-	@Column(name = "Ville")
 	private String ville;
-
-	@Column(name = "Code Postal")
 	private int codePostal;
 
-	/******************** Constructeurs ****************************/
-
 	public Cinema() {
-		super();
 	}
 
 	public Cinema(String nom, long telephone, String mail, String rue, String ville, int codePostal) {
-		super();
 		this.nom = nom;
 		this.telephone = telephone;
 		this.mail = mail;
@@ -50,7 +31,6 @@ public class Cinema {
 	}
 
 	public Cinema(long idCinema, String nom, long telephone, String mail, String rue, String ville, int codePostal) {
-		super();
 		this.idCinema = idCinema;
 		this.nom = nom;
 		this.telephone = telephone;
@@ -59,9 +39,7 @@ public class Cinema {
 		this.ville = ville;
 		this.codePostal = codePostal;
 	}
-	
-	/******************** Getters and Setters ******************************/
-	
+
 	public long getIdCinema() {
 		return idCinema;
 	}
@@ -89,7 +67,7 @@ public class Cinema {
 	public String getMail() {
 		return mail;
 	}
-	
+
 	public String getRue() {
 		return rue;
 	}
@@ -117,14 +95,5 @@ public class Cinema {
 	public void setCodePostal(int codePostal) {
 		this.codePostal = codePostal;
 	}
-	
-	/********************* To String *************************/
-	
-	@Override
-	public String toString() {
-		return "Cinema [idCinema=" + idCinema + ", nom=" + nom + ", telephone=" + telephone + ", mail=" + mail
-				+ ", rue=" + rue + ", ville=" + ville + ", codePostal=" + codePostal + "]";
-	}
 
 }
-

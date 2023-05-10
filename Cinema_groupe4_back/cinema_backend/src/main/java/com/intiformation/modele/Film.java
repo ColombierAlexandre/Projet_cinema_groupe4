@@ -2,15 +2,10 @@ package com.intiformation.modele;
 
 import java.sql.Date;
 import java.sql.Time;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
@@ -18,28 +13,29 @@ import jakarta.persistence.ManyToMany;
 
 @Entity
 public class Film {
-	
+
 	@Id
 	private int visaExploitation;
-	private String titre ; 
+	private String titre;
+	private String urlImage;
 	private Time duree;
-	private String realisateur; 
-	private String producteur; 
+	private String realisateur;
+	private String producteur;
 	private String[] acteurs;
 	private Date dateDeSortie;
-	@ManyToMany(cascade=CascadeType.ALL)
-	@JoinTable(name="Caracteristiques_join_Film", joinColumns = @JoinColumn(name = "IdFilm"), inverseJoinColumns=@JoinColumn(name="IdCarac"))
+	@ManyToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "Caracteristiques_join_Film", joinColumns = @JoinColumn(name = "IdFilm"), inverseJoinColumns = @JoinColumn(name = "IdCarac"))
 	private List<Caracteristiques> listeCaracteristiques;
-	
+
 	public Film() {
-		super();
 	}
 
-	public Film(int visaExploitation, String titre, Time duree, String realisateur, String producteur, String[] acteurs,
-			Date dateDeSortie, List<Caracteristiques> listeCaracteristiques) {
+	public Film(int visaExploitation, String titre, String urlImage, Time duree, String realisateur, String producteur,
+			String[] acteurs, Date dateDeSortie, List<Caracteristiques> listeCaracteristiques) {
 		super();
 		this.visaExploitation = visaExploitation;
 		this.titre = titre;
+		this.urlImage = urlImage;
 		this.duree = duree;
 		this.realisateur = realisateur;
 		this.producteur = producteur;
@@ -47,6 +43,8 @@ public class Film {
 		this.dateDeSortie = dateDeSortie;
 		this.listeCaracteristiques = listeCaracteristiques;
 	}
+
+
 
 	public int getVisaExploitation() {
 		return visaExploitation;
@@ -111,17 +109,14 @@ public class Film {
 	public void setListeCaracteristiques(List<Caracteristiques> listeCaracteristiques) {
 		this.listeCaracteristiques = listeCaracteristiques;
 	}
+
+	public String getUrlImage() {
+		return urlImage;
+	}
+
+	public void setUrlImage(String urlImage) {
+		this.urlImage = urlImage;
+	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

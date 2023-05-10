@@ -4,9 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.intiformation.modele.Caracteristiques;
 
-public interface CaracteristiquesRepo extends JpaRepository<Caracteristiques, Long> {
-	
-	
-
+public interface CaracteristiquesRepository extends JpaRepository<Caracteristiques, Long> {
 
 }

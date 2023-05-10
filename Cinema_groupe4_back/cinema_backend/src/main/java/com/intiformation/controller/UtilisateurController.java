@@ -23,35 +23,35 @@ public class UtilisateurController {
 
 	@Autowired
 	UtilisateurService utilisateurService;
-	
+
 	@PostMapping
 	public Utilisateur addUtilisateurController(@RequestBody Utilisateur utilisateur) {
-		return  utilisateurService.addUtilisateurService(utilisateur);
+		return utilisateurService.addUtilisateurService(utilisateur);
 	}
-	
+
 	@PutMapping
-	public Utilisateur updateUtilisateurController (@RequestBody Utilisateur utilisateur) {
+	public Utilisateur updateUtilisateurController(@RequestBody Utilisateur utilisateur) {
 		return utilisateurService.updateUtilisateurService(utilisateur);
 	}
-	
+
 	@GetMapping("getById/{id}")
-	public Utilisateur getUtilisateurByIdController (@PathVariable("id") Long idUtilisateur) {
+	public Utilisateur getUtilisateurByIdController(@PathVariable("id") Long idUtilisateur) {
 		return utilisateurService.getUtilisateurByIdService(idUtilisateur);
 	}
-	
+
 	@GetMapping("getByEmail/{email}")
-	public Utilisateur getUtilisateurByEmailController (@PathVariable("email") String email) {
+	public Utilisateur getUtilisateurByEmailController(@PathVariable("email") String email) {
 		return utilisateurService.getUtilisateurByEmailService(email);
 	}
-	
+
 	@GetMapping
-	public List<Utilisateur> getAllUtilisateursController(){
+	public List<Utilisateur> getAllUtilisateursController() {
 		return utilisateurService.getAllUtilisateursService();
 	}
-	
+
 	@DeleteMapping("/{id}")
-	public void deleteUtilisateurController (@PathVariable("id") Long idUtilisateur) {
+	public void deleteUtilisateurController(@PathVariable("id") Long idUtilisateur) {
 		utilisateurService.deleteUtilisateurService(idUtilisateur);
 	}
-	
+
 }

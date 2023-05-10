@@ -18,29 +18,31 @@ public class ProgrammationService {
 	public void setProgrammationRepository(ProgrammationRepository programmationRepository) {
 		this.programmationRepository = programmationRepository;
 	}
-	
+
 	public Programmation addProgrammation(Programmation programmation) {
 		return programmationRepository.save(programmation);
 	}
-	
+
 	public Programmation updateProgrammation(Programmation programmation) {
 		return programmationRepository.save(programmation);
 	}
-	
+
 	public void deleteProgrammation(Long idProgrammation) {
 		programmationRepository.deleteById(idProgrammation);
 	}
-	
+
 	public Programmation getProgrammationById(Long idProgrammation) {
 		Optional<Programmation> optProgrammation = programmationRepository.findById(idProgrammation);
-		if(optProgrammation.isPresent()) {
-		return optProgrammation.get();
+		if (optProgrammation.isPresent()) {
+			return optProgrammation.get();
 		}
 		return null;
 	}
-	
-	public List<Programmation> getAllProgrammation(){
+
+	public List<Programmation> getAllProgrammation() {
 		return programmationRepository.findAll();
 	}
+	
+	
 
 }

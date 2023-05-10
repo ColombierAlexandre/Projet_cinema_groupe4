@@ -11,37 +11,40 @@ import com.intiformation.modele.Place;
 
 @Service
 public class PlaceService {
-	
+
 	private PlaceRepository placeRepository;
 
 	@Autowired
 	public void setPlaceRepository(PlaceRepository placeRepository) {
 		this.placeRepository = placeRepository;
 	}
-	
+
 	public Place addPlace(Place place) {
 		return placeRepository.save(place);
 	}
-	
+
 	public Place updatePlace(Place place) {
 		return placeRepository.save(place);
 	}
-	
+
 	public void deletePlace(Long idPlace) {
 		placeRepository.deleteById(idPlace);
 	}
-	
+
 	public Place getPlaceById(Long idPlace) {
 		Optional<Place> optPlace = placeRepository.findById(idPlace);
-		if(optPlace.isPresent()) {
-		return optPlace.get();
+		if (optPlace.isPresent()) {
+			return optPlace.get();
 		}
 		return null;
 	}
-	
-	public List<Place> getAllPlace(){
+
+	public List<Place> getAllPlace() {
 		return placeRepository.findAll();
 	}
-	
+
+	public List<Place> getAllPlaceForShow(Long idProg) {
+		return placeRepository.getAllPlaceForShow(idProg);
+	}
 
 }
