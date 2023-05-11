@@ -5,7 +5,7 @@ import { ValiderTicketComponent } from './composant/valider-ticket/valider-ticke
 
 const routes: Routes = [
   {path:"listFilms",component:ListeFilmComponent},
-  {path:"listFilms",component:ValiderTicketComponent},
+  {path:"validerTicket",component:ValiderTicketComponent},
   
   {path:"",redirectTo: '/listFilms',pathMatch:'full'}
 ];
