@@ -11,6 +11,9 @@ section{
     border-radius: 50px;
 
 }
+.slide{
+    display: flex;
+}
 .container{
     position: absolute;
     width: 80%;

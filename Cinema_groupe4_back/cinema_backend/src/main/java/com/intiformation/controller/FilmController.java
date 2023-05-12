@@ -17,7 +17,7 @@ import com.intiformation.modele.Film;
 import com.intiformation.service.FilmService;
 
 @RestController
-@RequestMapping("filmapi")
+@RequestMapping("film_api")
 @CrossOrigin("http://localhost:4200")
 public class FilmController {
 

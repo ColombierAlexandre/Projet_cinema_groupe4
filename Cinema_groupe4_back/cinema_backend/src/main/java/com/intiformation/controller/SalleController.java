@@ -17,7 +17,7 @@ import com.intiformation.modele.Salle;
 import com.intiformation.service.SalleService;
 
 @RestController
-@RequestMapping("salleapi")
+@RequestMapping("salle_api")
 @CrossOrigin("http://localhost:4200")
 public class SalleController {
 

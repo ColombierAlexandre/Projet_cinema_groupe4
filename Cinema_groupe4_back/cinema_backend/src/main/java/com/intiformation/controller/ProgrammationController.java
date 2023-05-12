@@ -19,7 +19,7 @@ import com.intiformation.modele.Programmation;
 import com.intiformation.service.ProgrammationService;
 
 @RestController
-@RequestMapping("/programmation")
+@RequestMapping("/programmation_api")
 @CrossOrigin("http://localhost:4200")
 public class ProgrammationController {
 
