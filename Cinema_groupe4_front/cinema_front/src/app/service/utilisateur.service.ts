@@ -18,5 +18,26 @@ export class UtilisateurService {
     return this.httpClient.get<Utilisateur>(this._url + "/getByEmail/" + email)
   }
 
+  getAllUtilisateurs() : Observable<Utilisateur[]> {
+    return this.httpClient.get<Utilisateur[]>(this._url);
+  }
+
+  addUtilisateur(utilisateur : Utilisateur) : Observable<Utilisateur>{
+    return this.httpClient.post<Utilisateur>(this._url,utilisateur);
+  }
+
+  updateUtilisateur(utilisateur : Utilisateur) : Observable<Utilisateur>{
+    return this.httpClient.put<Utilisateur>(this._url,utilisateur);
+  }
+
+  deleteUtilisateur(utilisateur : Utilisateur) : Observable<Utilisateur>{
+    //return this.httpClient.delete<PokemonInterface>(this._url + "/" + pokemon.id);
+    console.log(utilisateur);
+    return this.httpClient.delete<Utilisateur>(`${this._url}/${utilisateur.idUtilisateur}`);
+  }
+
+  getUtilisateurById(id : number) : Observable<Utilisateur> {
+    return this.httpClient.get<Utilisateur>(this._url + "/" + id);
+  }
 
 }

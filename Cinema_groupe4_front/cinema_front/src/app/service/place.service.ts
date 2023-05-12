@@ -14,14 +14,20 @@ export class PlaceService {
 
   constructor(private httpClient : HttpClient) { }
 
-  getAllPlaceForASalle(idSalle : number) : Observable<Place[]>{
-    return this.httpClient.get<Place[]>(this._url + "/getAll");
-  }
   updatePlace(palce : Place) : Observable<Place>{
     return this.httpClient.put<Place>(this._url,palce);
   }
-  getPlaceId(id : number) : Observable<Place>{
+  
+  getPlaceById(id : number) : Observable<Place>{
     return this.httpClient.get<Place>(this._url + "/" + id);
+  }
+
+  getAllPlace() : Observable<Place[]>{
+    return this.httpClient.get<Place[]>(this._url);
+  }
+
+  getAllPlaceByProgrammation(idProg : number) : Observable<Place[]>{
+    return this.httpClient.get<Place[]>(this._url + "/allProg/" + idProg);
   }
 
 }

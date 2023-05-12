@@ -14,11 +14,21 @@ export class FilmService {
 
   constructor(private httpClient : HttpClient) { }
 
-  getAllFilm() : Observable<Film[]> {
-    return this.httpClient.get<Film[]>(this._url);
-  }
-  getOne(visa : number) : Observable<Film> {
+  getFilmBoById(visa : number) : Observable<Film> {
     return this.httpClient.get<Film>(this._url + "/" + visa);
   }
 
+  getFilmBoByName(name : string) : Observable<Film> {
+    return this.httpClient.get<Film>(this._url + "/titre/" + name);
+  }
+
+  getAllFilm() : Observable<Film[]> {
+    return this.httpClient.get<Film[]>(this._url);
+  }
+
+  getFilmByProg(id : number) : Observable<Film>{
+    return this.httpClient.get<Film>(this._url);
+  }
+  
+  
 }
