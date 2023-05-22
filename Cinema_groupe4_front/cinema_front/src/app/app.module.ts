@@ -6,14 +6,16 @@ import { HeaderComponent } from './contant/header/header.component';
 import { FooterComponent } from './contant/footer/footer.component';
 import { AfficherUnFilmComponent } from './composant/afficher-un-film/afficher-un-film.component';
 import { CarouselComponent } from './composant/carousel/carousel.component';
-import { AfficherCinemaComponent } from './composant/afficher-cinema/afficher-cinema.component';
+
 import { FormulaireConnexionComponent } from './composant/formulaire-connexion/formulaire-connexion.component';
 import { FormulaireInscriptionComponent } from './composant/formulaire-inscription/formulaire-inscription.component';
 import { ListeFilmComponent } from './composant/liste-film/liste-film.component';
 import { PlaceComponent } from './composant/place/place.component';
 import { ValiderTicketComponent } from './composant/valider-ticket/valider-ticket.component';
 import { ListeProgrammationComponent } from './composant/liste-programmation/liste-programmation.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ListeCinemaComponent } from './composant/afficher-cinema/afficher-cinema.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     AfficherUnFilmComponent,
     CarouselComponent,
-    AfficherCinemaComponent,
+    ListeCinemaComponent,
     FormulaireConnexionComponent,
     FormulaireInscriptionComponent,
     ListeFilmComponent,
@@ -33,7 +35,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

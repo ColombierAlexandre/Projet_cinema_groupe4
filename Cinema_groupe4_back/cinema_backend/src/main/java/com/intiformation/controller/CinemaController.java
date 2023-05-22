@@ -57,6 +57,11 @@ public class CinemaController {
 	public List<Cinema> ObtenirCinemaParVille(@PathVariable("ville") String ville) {
 		return cineServ.getCinemaByVille(ville);
 	}
+	
+	@GetMapping("/getcodePostal/{codePostal}")
+	public List<Cinema> ObtenirCinemaParcodePostal(@PathVariable("codePostal") int codePostal) {
+		return cineServ.getCinemaBycodePostal(codePostal);
+	}
 
 	@GetMapping
 	public List<Cinema> ObtenirTousCinemas() {

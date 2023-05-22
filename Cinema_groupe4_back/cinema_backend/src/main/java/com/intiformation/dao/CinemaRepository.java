@@ -17,5 +17,11 @@ public interface CinemaRepository extends JpaRepository<Cinema, Long> {
 
 	@Query("SELECT c FROM Cinema c WHERE c.ville = :villeParam")
 	List<Cinema> findAllByVille(@Param("villeParam") String ville);
+	
+	
+	@Query("SELECT c FROM Cinema c WHERE c.codePostal = :codePostalParam")
+	List<Cinema> findAllBycodePostal(@Param("codePostalParam") int codePostal);
+	
+	
 
 }

@@ -40,3 +40,43 @@
 2023-05-04 14:16:26,760 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
 2023-05-04 14:17:19,516 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
 2023-05-04 14:17:19,540 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-04 16:05:02,885 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-05-04 16:05:11,983 [Worker-9: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.intiformation:cinema_backend:0.0.1-SNAPSHOT @ C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\pom.xml.
+2023-05-04 16:05:13,976 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-04 16:05:14,094 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-04 16:05:14,102 [Worker-9: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 11:10:48,545 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-11 11:11:01,899 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 11:11:01,971 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 11:11:01,985 [Worker-12: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:32:34,045 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:32:34,101 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:32:34,111 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:33:59,122 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:33:59,134 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:33:59,140 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:34:11,003 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:34:11,011 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:34:11,017 [Worker-22: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:35:39,818 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:35:39,828 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:35:39,833 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:36:59,716 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:36:59,725 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:36:59,731 [Worker-18: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:40:09,789 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:40:09,798 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:40:09,804 [Worker-28: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:41:43,283 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:41:43,291 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:41:43,297 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-11 13:42:23,241 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-11 13:42:23,250 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-11 13:42:23,262 [Worker-29: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-12 13:41:25,907 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-15 10:28:14,773 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-15 10:29:42,171 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-05-15 10:29:42,296 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-05-15 10:29:42,300 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\IN-TR-021\Desktop\Projet Final\Projet_cinema_groupe4\Cinema_groupe4_back\cinema_backend\src\test\resources
+2023-05-17 11:39:38,288 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-05-19 10:31:27,681 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.

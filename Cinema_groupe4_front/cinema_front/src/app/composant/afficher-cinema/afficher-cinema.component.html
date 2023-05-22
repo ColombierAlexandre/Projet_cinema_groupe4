@@ -1,1 +1,58 @@
-<p>afficher-cinema works!</p>
+
+
+<div class="barre-recherche">
+    <input type="search" id="search" value="" [(ngModel)]="recherche">
+    <input type="button" id="button" (click)="recherchercinemaliste()" value="Rechercher un cinema">
+</div>
+    
+
+  
+<div  class="containers" #myDiv0>  
+  <div *ngFor="let cinema of cinemarecherche">
+    <ul >
+      <h1>{{cinema.ville}}</h1>
+      <p>{{cinema.nom}}<p>
+        <p>{{cinema.rue}}<p>
+        <p>{{cinema.codePostal}}<p>
+        <p>{{cinema.mail}}<p>
+        <p>{{cinema.telephone}}<p>
+        <hr>
+    </ul>
+  </div>
+  
+
+
+  <div *ngIf="cinemarecherche.length == 0"  class="containers" #myDiv>
+    <div *ngFor="let cinema of cinemas">
+      <ul >
+        <h1>{{cinema.ville}}</h1>
+        <p>{{cinema.nom}}<p>
+          <p>{{cinema.rue}}<p>
+          <p>{{cinema.codePostal}}<p>
+          <p>{{cinema.mail}}<p>
+          <p>{{cinema.telephone}}<p>
+          <hr>
+      </ul>
+    </div>
+
+    <!-- <ol class="list-group list-group-numbered" *ngFor="let cinema of cinemas">
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <h1>{{cinema.ville}}</h1> 
+          <div class="fw-bold">{{cinema.nom}}</div>
+          <div class="fw-bold">{{cinema.rue}}</div>
+          <div class="fw-bold">{{cinema.codePostal}}</div>
+          <div class="fw-bold">{{cinema.mail}}</div>
+          <div class="fw-bold">{{cinema.telephone}}</div>
+        </div>
+        <span class="badge bg-primary rounded-pill">1</span>
+      </li>
+      
+    </ol> -->
+
+  </div>
+  
+
+
+
+

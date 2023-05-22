@@ -47,9 +47,15 @@ public class CinemaService {
 		}
 
 	}
+	
 
 	public List<Cinema> getCinemaByVille(String ville) {
 		return cineRepo.findAllByVille(ville);
+
+	}
+	
+	public List<Cinema> getCinemaBycodePostal(int codePostal) {
+		return cineRepo.findAllBycodePostal(codePostal);
 
 	}
 
